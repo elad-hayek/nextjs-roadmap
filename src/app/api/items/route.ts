@@ -49,6 +49,7 @@ export async function PUT(req: Request) {
 }
 
 export async function GET() {
+  return new Response(JSON.stringify([{_id: "123", name: "test"}]), { status: 200 });
   const client = await clientPromise;
   const db = client.db("testdb");
 
